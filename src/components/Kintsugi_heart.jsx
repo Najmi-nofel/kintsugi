@@ -14,7 +14,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 export function Model(props) {
   const group = React.useRef();
   const { nodes, materials, animations } = useGLTF(
-    "/kintsugi_heart-transformed.glb",
+    `${import.meta.env.BASE_URL}kintsugi_heart-transformed.glb`,
   );
   const { actions } = useAnimations(animations, group);
   return (

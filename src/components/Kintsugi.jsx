@@ -8,16 +8,20 @@ Source: https://sketchfab.com/3d-models/kintsugi-8c83e826eeb54139baaf6f94a9098db
 Title: Kintsugi
 */
 
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF } from "@react-three/drei";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/kintsugi-transformed.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}kintsugi-transformed.glb`,
+  );
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_4.geometry} material={materials['Scene_-_Root']} />
+      <mesh
+        geometry={nodes.Object_4.geometry}
+        material={materials["Scene_-_Root"]}
+      />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/kintsugi-transformed.glb')
+useGLTF.preload("/kintsugi-transformed.glb");

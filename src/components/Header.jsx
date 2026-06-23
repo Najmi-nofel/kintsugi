@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Logs, Plus, ShoppingCart } from "lucide-react";
 import { useRef, useState } from "react";
+import { giftVideo } from "../assets/gift.webm";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -137,7 +138,7 @@ function Header() {
           <div className="text-lg font-semibold hidden lg:flex lg:gap-2 lg:w-24 px-2  bg-slate-700 rounded lg:items-center cursor-pointer hover:bg-slate-800">
             Gift{" "}
             <video
-              src="src\assets\gift.webm"
+              src={giftVideo}
               className="w-10 h-10 object-contain"
               autoPlay
               loop

@@ -12,7 +12,7 @@ import { useGLTF } from "@react-three/drei";
 
 export function Model(props) {
   const { nodes, materials } = useGLTF(
-    "/kintsugi_cup_of_coffee-transformed.glb",
+    `${import.meta.env.BASE_URL}kintsugi_cup_of_coffee-transformed.glb`,
   );
   return (
     <group {...props} position={[-1, 1.5, 0]} dispose={null}>
