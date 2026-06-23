@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Logs, Plus, ShoppingCart } from "lucide-react";
 import { useRef, useState } from "react";
-import { giftVideo } from "../assets/gift.webm";
+import giftVideo from "../assets/gift.webm";
 
 gsap.registerPlugin(ScrollTrigger);
 
