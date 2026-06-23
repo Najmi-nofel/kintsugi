@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main: #d4af37;
+  --color-secondary: #f3e5ab;
+  --color-charcoal: #121212;
+  --color-cream: #eadbc8;
+  --color-clay: #2c2a29;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f3f4f6;
+  @apply box-border;
+}
+
+h2 {
+  @apply font-serif text-3xl md:text-5xl mb-6;
+}
+
+@layer components {
+  /* formmated text */
+  .head-title {
+    @apply text-xs uppercase tracking-[0.4em] mb-3;
+    color: var(--color-main);
+  }
+
+  .desc-title {
+    @apply text-gray-400 text-sm md:text-base max-w-xl;
+  }
+
+  /* menu bar */
+  .bg-hover {
+    @apply hover:bg-[#232323];
+  }
+
+  /* Hero */
+  .gold-glow {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+  }
+
+  /* shadow effect */
+  .clay-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+  }
+}
